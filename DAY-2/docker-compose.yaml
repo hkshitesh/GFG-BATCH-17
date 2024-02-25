@@ -1,0 +1,14 @@
+version: '3'
+services:
+  databases:
+    image: mysql
+    ports:
+      - "3307:3306"
+    env_file:
+      - evs.env    
+  web:
+    image: nginx    
+    ports:
+      - "8088:80" 
+    depends_on:
+      - databases

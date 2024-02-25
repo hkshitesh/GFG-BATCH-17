@@ -1,0 +1,14 @@
+version: '3'
+services:
+  databases:
+    image: mysql
+    ports:
+      - "3307:3306"    
+  web1:
+    image: nginx    
+    ports:
+      - "8088:80" 
+  web2:
+    image: httpd    
+    ports:
+      - "8082:80" 
